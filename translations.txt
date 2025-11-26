@@ -1,0 +1,77 @@
+const uzsakymoSchema = new mongoose.Schema({
+  vartotojas: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Vartotojas'
+  },
+  data: Date,
+  uzsakovas: String,
+  uzsakymas: String,
+  maketavimoPaslauga: Boolean,
+  formatas: String,
+  vienpuseSpauda: Boolean,
+  dvipuseSpauda: Boolean,
+  popierius: String,
+  laminavimas: String,
+  irisimas: String,
+  lakavimas3DUV: Boolean,
+  kitiPospaudiminiaiDarbai: String,
+  tirazas: Number,
+  papildomaUzsakymoInformacija: String,
+  pristatymoKaina: Number,
+  issiuntimoData: Date,
+  uzsakymoKaina: Number,
+  saskaitosNumeris: String,
+  saskaitosBusena: String,
+  pastabos: String,
+  uzsakovoKontaktiniaiDuomenys: String
+})
+
+const orderSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  date: Date,
+  customer: String,
+  orderDescription: String,
+  designService: Boolean,
+  format: String,
+  singleSidedPrint: Boolean,
+  doubleSidedPrint: Boolean,
+  paper: String,
+  lamination: String,
+  binding: String,
+  uv3DCoating: Boolean,
+  otherPostPrintingWorks: String,
+  quantity: Number,
+  additionalOrderInformation: String,
+  deliveryCost: Number,
+  shippingDate: Date,
+  orderPrice: Number,
+  invoiceNumber: String,
+  invoiceStatus: String,
+  additionalNotes: String,
+  customerContactDetails: String
+})
+
+data - date
+uzsakovas - customer
+uzsakymas - orderDescription
+maketavimoPaslauga - designService
+formatas - format
+vienpuseSpauda - singleSidedPrint
+dvipuseSpauda - doubleSidedPrint
+popierius - paper
+laminavimas - lamination
+irisimas - binding
+lakavimas3DUV - uv3DCoating
+kitiPospaudiminiaiDarbai - otherPostPrintingWorks
+tirazas - quantity
+papildomaUzsakymoInformacija - additionalOrderInformation
+pristatymoKaina - deliveryCost
+issiuntimoData - shippingDate
+uzsakymoKaina - orderPrice
+saskaitosNumeris - invoiceNumber
+saskaitosBusena - invoiceStatus
+pastabos - additionalNotes
+uzsakovoKontaktiniaiDuomenys - customerContactDetails

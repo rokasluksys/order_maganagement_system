@@ -1,0 +1,38 @@
+backend:
+
+	orders:
+		create,
+		read,
+		update,
+		delete
+		
+	users:
+		create,
+		read,
+		update? (perhaps to change password in case password is forgotten, but I'd need to add email verification for that),
+		delete (then I'd need to implement admin user who can delete all notes, which is a good idea probably)
+		
+	login:
+		
+	register:
+		for general users (admin users could be created by the admin raising priviledges of an existing user)
+		
+frontend:
+	
+	registration page:
+		first user created is admin, others are basic
+		
+	login page:
+		
+	
+	order page:
+		general view (users can only see their own orders, admin can see everyones),
+		search function,
+		creating function,
+		editing function,
+		deletion function
+		
+	account center page?:
+		change name,
+		change password
+		delete account
